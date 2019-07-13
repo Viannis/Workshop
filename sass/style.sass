@@ -1,0 +1,190 @@
+// Global styles
+// Variables
+$black: #1D1D1D
+$grey: #B1B1B1
+$yellow: #FFC001
+
+
+body
+	height: 100vh
+	width: 100vw
+	padding: 0
+	margin: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	flex-direction: column
+
+//Welcome screen
+.welcome
+	 height: 100vh
+	 width: 100vw
+	 position: absolute
+	 background: #4A4A4A
+	 display: flex
+	 align-items: center
+	 justify-content: center
+	 flex-direction: column
+	 letter-spacing: 2px
+	 color: #FFF
+
+.heading
+	 font-family: "Snell Roundhand"
+	 font-size: 50px
+	 margin-bottom: 0px
+	 opacity: 0
+
+.sub-heading
+	 font-size: 16px
+	 font-weight: 100
+	 letter-spacing: 2px
+	 font-family: "Avenir Next"
+	 margin-bottom: 40px
+	 opacity: 0
+
+.loader-wrapper
+	 height: 2px
+	 width: 150px
+	 background: #ededed
+	 border-radius: 100px
+	 opacity: 0
+
+.loader
+	 height: 2px
+	 width: 150px
+	 background: #FFF
+	 border-radius: 100px
+	 background: #585858
+
+p
+	 max-width: 500px
+	 font-family: "Avenir"
+	 line-height: 25px
+	 text-align: justify
+	 opacity: 0
+	 color: #585858
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: "Futura"
+	font-weight: normal
+
+.flex-center
+	display: flex
+	justify-content: center
+	align-items: center
+
+// Navigation
+.nav-wrapper
+	width: 1200px
+	height: 90px
+	position: absolute
+	top: 0
+	left: 0
+	display: flex
+	flex-direction: row
+	z-index: 1
+
+.logo
+	font-size: 10px
+	background: $black
+	color: #FFF
+	width: 230px
+	height: 100%
+	@extend .flex-center
+
+nav
+	display: flex
+	align-items: center
+	justify-content: space-around
+	width: 100%
+	background-color: #FFF
+
+	a
+		color: $grey
+		text-decoration: none
+		display: flex
+		flex-direction: row
+		transition: color 1s ease
+
+		&:hover
+			color: $black
+
+.active
+	color: $black
+
+// Gallery navigation
+.gallery-nav
+	width: 230px
+	height: 105px
+	position: absolute
+	bottom: 0
+	right: 0
+	display: flex
+	flex-direction: row
+	align-self: center
+
+	div
+		flex: 1
+		background-color: $yellow
+		@extend .flex-center
+		cursor: pointer
+
+		&:hover
+			box-shadow: 0px 0px 50px rgba(#000, 0.1)
+
+		img
+			height: 18px
+
+#white-bg
+	background-color: #FFF
+	transition: box-shadow 1s ease
+
+	img
+		transform: rotate(180deg)
+
+// Text section
+.column-wrapper
+	display: flex
+	height: 100vh
+	width: 100vw
+	section
+		display: flex
+
+.text-section
+	flex: 1
+	flex-direction: column
+	justify-content: center
+	align-items: flex-start
+	padding-left: 110px
+
+	h1
+		font-size: 95px
+		width: 700px
+		margin-bottom: 100px
+
+	p
+		max-width: 100%
+		line-height: 25px
+		color: $grey
+		margin-bottom: 50px
+		letter-spacing: 1px
+
+.details-btn
+	font-weight: bold
+	font-size: 16px
+	display: flex
+	align-items: center
+	letter-spacing: 1px
+	cursor: pointer
+
+	&:hover img
+		transform: rotate(405deg)
+
+	img
+		transition: all .6s ease
+		height: 11px
+		margin-left: 10px
+
+			color: #08A0E9
